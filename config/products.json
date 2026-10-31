@@ -1,0 +1,102 @@
+[
+  {
+    "id": "noir",
+    "name": "Noir",
+    "subtitle": "A quieter kind of statement",
+    "category": "Leather",
+    "price": 8490,
+    "image": "/images/noir.jpg",
+    "imagePosition": "50% 50%",
+    "tone": "#b79362",
+    "tag": "Signature",
+    "description": "A deep green dial meets a warm rose-toned case and dark leather. An understated silhouette with a character all its own.",
+    "options": [
+      {
+        "name": "Style",
+        "values": [
+          "Green / Leather"
+        ]
+      }
+    ],
+    "specifications": {
+      "Dial colour": "Deep green",
+      "Case finish": "Rose tone",
+      "Strap style": "Dark leather"
+    }
+  },
+  {
+    "id": "argent",
+    "name": "Argent",
+    "subtitle": "Blue, with a different depth",
+    "category": "Steel",
+    "price": 12490,
+    "image": "/images/argent.jpg",
+    "imagePosition": "50% 48%",
+    "tone": "#a6b2b9",
+    "tag": "Studio favourite",
+    "description": "A blue sunburst dial, a sculpted bezel and a polished steel bracelet. An expressive take on an everyday classic.",
+    "options": [
+      {
+        "name": "Style",
+        "values": [
+          "Blue / Steel"
+        ]
+      }
+    ],
+    "specifications": {
+      "Dial colour": "Blue",
+      "Case finish": "Silver tone",
+      "Strap style": "Metal bracelet"
+    }
+  },
+  {
+    "id": "aureum",
+    "name": "Aureum",
+    "subtitle": "An occasion in every detail",
+    "category": "Two-tone",
+    "price": 15990,
+    "image": "/images/aureum.jpg",
+    "imagePosition": "50% 50%",
+    "tone": "#a0aaa7",
+    "tag": "New perspective",
+    "description": "A richly textured dial and a two-tone bracelet make Aureum the centre of attention. A collection piece for a more expressive point of view.",
+    "options": [
+      {
+        "name": "Style",
+        "values": [
+          "Gold / Two-tone"
+        ]
+      }
+    ],
+    "specifications": {
+      "Dial colour": "Gold tone",
+      "Case finish": "Gold and silver tone",
+      "Strap style": "Two-tone bracelet"
+    }
+  },
+  {
+    "id": "sable",
+    "name": "Sable",
+    "subtitle": "Soft texture. Strong character.",
+    "category": "Leather",
+    "price": 9990,
+    "image": "/images/sable.jpg",
+    "imagePosition": "50% 50%",
+    "tone": "#8b8e9e",
+    "tag": "Essential",
+    "description": "A dark dial framed by a soft, geometric case. Paired with a textured leather strap, Sable finds its balance between relaxed and refined.",
+    "options": [
+      {
+        "name": "Style",
+        "values": [
+          "Dark / Leather"
+        ]
+      }
+    ],
+    "specifications": {
+      "Dial colour": "Dark",
+      "Case finish": "Silver tone",
+      "Strap style": "Textured dark leather"
+    }
+  }
+]

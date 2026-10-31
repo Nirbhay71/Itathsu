@@ -1,0 +1,25 @@
+{
+  "name": "Itatshu",
+  "wordmark": "ITATSHU",
+  "tagline": "Time, considered.",
+  "description": "An independent perspective on everyday timepieces. Discover the Itatshu collection.",
+  "currency": "INR",
+  "locale": "en-IN",
+  "collectionLabel": "The timepiece collection",
+  "edition": "Collection 01 / 2026",
+  "heroTitle": [
+    "A moment.",
+    "Made yours."
+  ],
+  "heroDescription": "For the hours that matter. A considered collection of timepieces, each with a character of its own.",
+  "storyTitle": "Less noise. More meaning.",
+  "storyDescription": "We believe the things you wear should feel like you. Quiet details. Distinct character. Objects you reach for, day after day.",
+  "accentColor": "#c9ac76",
+  "categories": [
+    "All pieces",
+    "Leather",
+    "Steel",
+    "Two-tone"
+  ],
+  "demoNotice": "Concept store \u00b7 Sample products and prices \u00b7 Purchasing is not enabled"
+}
