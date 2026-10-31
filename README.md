@@ -1,6 +1,6 @@
 # Itatshu
 
-A responsive, showroom-inspired storefront built with **React, Node.js, Express and SQLite**. Features a horizontal illuminated collection, product details, configurable options, image zoom, category filters and a persistent shopping bag. Prices use Indian rupees.
+A responsive, showroom-inspired storefront built with **React, Node.js, Express and SQLite**. Features a full-screen architectural showroom, spotlighted stone alcoves, isolated watch artwork, reflections, product-to-detail zoom transitions, configurable options, category filters and a persistent shopping bag. Prices use Indian rupees.
 
 ## Run locally
 
@@ -26,7 +26,7 @@ The Express server serves both the React application and API. Direct visits to p
 
 | File | What to change |
 | --- | --- |
-| `config/store.json` | Company name, wordmark, hero copy, story, currency, locale, categories, accent colour and footer |
+| `config/store.json` | Company name, wordmark, collection title/copy, currency, locale, categories and accent colour |
 | `config/products.json` | Products, rupee prices, descriptions, categories, images, option groups and specifications |
 | `client/public/images/` | Local product photographs |
 | `client/public/favicon.svg` | Browser icon |
@@ -38,7 +38,7 @@ Restart the server after changing the product catalogue. The JSON catalogue is t
 
 ### Product images and Cloudinary
 
-The four included photographs were supplied by the project owner. No Unsplash images are included. Their original product markings are preserved. Itatshu is the concept storefront name, not a claim about the manufacturers shown. Names, descriptions, options and prices are illustrative demo catalogue data, not verified commercial listings.
+The four original JPEG photographs were supplied by the project owner and are preserved. No Unsplash images are included. The showroom uses an AI-prepared transparent watch atlas and an AI-generated empty stone alcove backplate; these are presentation assets rather than verified product photography. The original-photo button on each product page shows the supplied photo. See `ASSETS.md` for provenance and prompts. Their original product markings are preserved. Itatshu is the concept storefront name, not a claim about the manufacturers shown. Names, descriptions, options and prices are illustrative demo catalogue data, not verified commercial listings.
 
 Set each product's `image` field to either:
 
@@ -52,12 +52,12 @@ or a public Cloudinary delivery URL:
 "image": "https://res.cloudinary.com/YOUR_CLOUD/image/upload/YOUR_ASSET.jpg"
 ```
 
-No Cloudinary credential is needed to display a public image. Uploading/admin functionality is outside this version's scope. Do not commit Cloudinary API secrets. Optional `imagePosition` values (e.g. `50% 40%`) control image positioning. Missing or failed images fall back to a clearly labelled preview illustration. Replace the watch-specific fallback when adapting this template to a different product category.
+No Cloudinary credential is needed to display a public image. Uploading/admin functionality is outside this version's scope. Do not commit Cloudinary API secrets. Optional `imagePosition` values (e.g. `50% 40%`) control original-photo positioning. `showroomImage` accepts a transparent cutout URL. The optional `showroomSlice` object selects an item from a shared atlas; omit it for a standalone cutout. Missing or failed images show a labelled unavailable state. For clothing, replace both the original photo and the showroom cutout, or omit `showroomImage` to use the original photo throughout.
 
 ## Implemented
 
-- Home collection with responsive horizontal browsing and category filters
-- Individual product URLs, details, options, quantity selection and image zoom
+- Full-screen collection with four desktop alcoves, a two-column phone layout, hover lighting and category filters
+- Individual product URLs, animated shared-product transitions, details, options, quantity selection and an original-photo toggle
 - Shopping bag drawer: add, merge identical selections, update quantities, remove and subtotal
 - Device-local bag persistence with validation of stored entries
 - Keyboard-accessible controls, native dialog focus management, Escape-to-close and reduced-motion support
@@ -93,3 +93,7 @@ git push -u origin main
 ```
 
 There is intentionally no open-source licence attached: public visibility does not grant an open-source licence. Confirm rights to supplied images before commercial publication.
+
+## Reference-inspired showroom revision
+
+The collection now leads with the architectural product display: dark stone niches, overhead spots, isolated objects, polished shelf reflections, minimal top navigation, and an italic collection caption below. Browser View Transitions animate the selected product between the collection and detail room when supported; other browsers navigate normally. Reduced-motion preferences disable animation. This is still a 2D composition, not an interactive 3D scene.
