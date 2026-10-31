@@ -7,11 +7,9 @@
   "locale": "en-IN",
   "collectionLabel": "The timepiece collection",
   "edition": "Collection 01 / 2026",
-  "heroTitle": ["A moment.", "Made yours."],
-  "heroDescription": "For the hours that matter. A considered collection of timepieces, each with a character of its own.",
-  "storyTitle": "Less noise. More meaning.",
-  "storyDescription": "We believe the things you wear should feel like you. Quiet details. Distinct character. Objects you reach for, day after day.",
-  "accentColor": "#c9ac76",
+  "accentColor": "#d9cdb9",
   "categories": ["All pieces", "Leather", "Steel", "Two-tone"],
-  "demoNotice": "Concept store \u00b7 Sample products and prices \u00b7 Purchasing is not enabled"
+  "demoNotice": "Concept store \u00b7 Sample products and prices \u00b7 Purchasing is not enabled",
+  "showroomTitle": "The time collection",
+  "showroomDescription": "Four expressions of time. A collection to make your own."
 }

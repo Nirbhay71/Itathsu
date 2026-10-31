@@ -7,7 +7,7 @@
     "price": 8490,
     "image": "/images/noir.jpg",
     "imagePosition": "50% 50%",
-    "tone": "#b79362",
+    "tone": "#b5a6a0",
     "tag": "Signature",
     "description": "A deep green dial meets a warm rose-toned case and dark leather. An understated silhouette with a character all its own.",
     "options": [
@@ -20,6 +20,13 @@
       "Dial colour": "Deep green",
       "Case finish": "Rose tone",
       "Strap style": "Dark leather"
+    },
+    "showroomImage": "/images/watch-cutouts-v2.webp",
+    "showroomSlice": {
+      "left": 0,
+      "width": 460,
+      "atlasWidth": 1774,
+      "atlasHeight": 887
     }
   },
   {
@@ -30,7 +37,7 @@
     "price": 12490,
     "image": "/images/argent.jpg",
     "imagePosition": "50% 48%",
-    "tone": "#a6b2b9",
+    "tone": "#92a7cf",
     "tag": "Studio favourite",
     "description": "A blue sunburst dial, a sculpted bezel and a polished steel bracelet. An expressive take on an everyday classic.",
     "options": [
@@ -43,6 +50,13 @@
       "Dial colour": "Blue",
       "Case finish": "Silver tone",
       "Strap style": "Metal bracelet"
+    },
+    "showroomImage": "/images/watch-cutouts-v2.webp",
+    "showroomSlice": {
+      "left": 460,
+      "width": 450,
+      "atlasWidth": 1774,
+      "atlasHeight": 887
     }
   },
   {
@@ -53,7 +67,7 @@
     "price": 15990,
     "image": "/images/aureum.jpg",
     "imagePosition": "50% 50%",
-    "tone": "#a0aaa7",
+    "tone": "#d3bb83",
     "tag": "New perspective",
     "description": "A richly textured dial and a two-tone bracelet make Aureum the centre of attention. A collection piece for a more expressive point of view.",
     "options": [
@@ -66,6 +80,13 @@
       "Dial colour": "Gold tone",
       "Case finish": "Gold and silver tone",
       "Strap style": "Two-tone bracelet"
+    },
+    "showroomImage": "/images/watch-cutouts-v2.webp",
+    "showroomSlice": {
+      "left": 910,
+      "width": 467,
+      "atlasWidth": 1774,
+      "atlasHeight": 887
     }
   },
   {
@@ -76,7 +97,7 @@
     "price": 9990,
     "image": "/images/sable.jpg",
     "imagePosition": "50% 50%",
-    "tone": "#8b8e9e",
+    "tone": "#b2a0bc",
     "tag": "Essential",
     "description": "A dark dial framed by a soft, geometric case. Paired with a textured leather strap, Sable finds its balance between relaxed and refined.",
     "options": [
@@ -89,6 +110,13 @@
       "Dial colour": "Dark",
       "Case finish": "Silver tone",
       "Strap style": "Textured dark leather"
+    },
+    "showroomImage": "/images/watch-cutouts-v2.webp",
+    "showroomSlice": {
+      "left": 1377,
+      "width": 397,
+      "atlasWidth": 1774,
+      "atlasHeight": 887
     }
   }
 ]
