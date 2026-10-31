@@ -13,9 +13,7 @@
     "options": [
       {
         "name": "Style",
-        "values": [
-          "Green / Leather"
-        ]
+        "values": ["Green / Leather"]
       }
     ],
     "specifications": {
@@ -38,9 +36,7 @@
     "options": [
       {
         "name": "Style",
-        "values": [
-          "Blue / Steel"
-        ]
+        "values": ["Blue / Steel"]
       }
     ],
     "specifications": {
@@ -63,9 +59,7 @@
     "options": [
       {
         "name": "Style",
-        "values": [
-          "Gold / Two-tone"
-        ]
+        "values": ["Gold / Two-tone"]
       }
     ],
     "specifications": {
@@ -88,9 +82,7 @@
     "options": [
       {
         "name": "Style",
-        "values": [
-          "Dark / Leather"
-        ]
+        "values": ["Dark / Leather"]
       }
     ],
     "specifications": {
