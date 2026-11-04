@@ -1,0 +1,87 @@
+/* One photographed architectural scene; interactive light and products sit inside it. */
+.showroom { background: #020203 url('/images/stone-gallery-v3.png') center / 100% 100% no-repeat; min-height: 650px; }
+.showroom:before, .room-ceiling, .room-architecture, .caption-aside, .room-bottom, .gallery-floor { display: none; }
+.header { height: 78px; background: none; padding-inline: 4%; }
+.wordmark { font-family: Arial, sans-serif; font-size: 15px; font-weight: 800; letter-spacing: .15em; }
+.brand-descriptor { font-size: 5px; letter-spacing: .15em; text-transform: uppercase; color: #858087; }
+.collection-switcher { top: 26px; }
+.collection-switcher summary { border-color: transparent; background: none; font-size: 9px; }
+.collection-status { background: #aaa; box-shadow: none; }
+.exhibition, .exhibition[data-size='1'], .exhibition[data-size='2'] {
+  left: 13.6%; right: 13.5%; top: 20.8%; bottom: 28.6%;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8.36%;
+}
+.exhibit { isolation: isolate; }
+.chamber, .exhibit.illuminated .chamber { background: transparent; border: 0; box-shadow: none; overflow: visible; }
+.chamber-scene { position: absolute; inset: 0; isolation: isolate; overflow: hidden; }
+.chamber-scene .stone-wall, .chamber-scene .niche-side, .chamber-scene .niche-ceiling, .chamber-scene .light-fixture, .chamber-scene .chamber-sill { display: none; }
+.chamber-scene .chamber-art { top: 33%; bottom: 3%; left: 10%; right: 10%; filter: drop-shadow(0 12px 8px #000b) brightness(.83); }
+.chamber-scene .chamber-beam {
+  inset: 2% 4% 0; z-index: 1; opacity: 0;
+  background: conic-gradient(from 160deg at 50% 0%, transparent, #fff6 6deg, #fff9 20deg, #fff6 34deg, transparent 40deg);
+  mask-image: linear-gradient(#000, transparent 95%); filter: blur(9px); mix-blend-mode: screen;
+  transition: opacity .8s;
+}
+.product-aura { position: absolute; inset: 28% -10% 0; z-index: 2; pointer-events: none; background: radial-gradient(ellipse at 50% 60%, color-mix(in srgb, var(--tone) 80%, transparent), transparent 68%); filter: blur(18px); mix-blend-mode: screen; opacity: .025; transition: opacity .8s; }
+.light-pool { position: absolute; z-index: 2; top: 93%; left: 0; width: 100%; height: 7%; background: radial-gradient(ellipse, var(--tone), transparent 70%); filter: blur(7px); opacity: .04; transition: opacity .8s; }
+.exhibit.illuminated .product-aura, .focus-chamber .product-aura { opacity: .55; }
+.exhibit.illuminated .light-pool, .focus-chamber .light-pool { opacity: .45; }
+.exhibit.illuminated .chamber-beam, .focus-chamber .chamber-beam { opacity: .4; }
+.exhibit.illuminated .chamber-art { transform: translateY(-2px) scale(1.015); filter: drop-shadow(0 0 16px color-mix(in srgb, var(--tone) 40%, transparent)) brightness(1.08); }
+.exhibit.receded .chamber-art { filter: drop-shadow(0 12px 8px #000b) brightness(.65); }
+/* Rough stone spreads the reflected light more as distance from contact grows. */
+.niche-reflection { position: absolute; top: 107%; left: 0; right: 0; height: 44%; overflow: hidden; pointer-events: none; opacity: .65; mask-image: linear-gradient(#000 0%, #000d 30%, #0008 65%, transparent 100%); transition: opacity .8s; }
+.reflection-band { position: absolute; inset: 0; }
+.reflection-near { filter: blur(.8px); mask-image: linear-gradient(#000 0% 12%, transparent 35%); }
+.reflection-middle { filter: blur(2.5px); mask-image: linear-gradient(transparent 12%, #000 35%, transparent 72%); }
+.reflection-far { filter: blur(5px); mask-image: linear-gradient(transparent 35%, #000 72%); }
+.niche-reflection .mirrored-scene { height: 227.273%; bottom: auto; transform: scaleY(-1); }
+.niche-reflection .chamber-art, .exhibit.illuminated .niche-reflection .chamber-art { transform: none; filter: brightness(.9) saturate(.8); }
+.exhibit.illuminated .niche-reflection { opacity: .72; }
+.wall-reflection {
+  position: absolute; z-index: 3; top: 33%; bottom: 3%; width: 7%;
+  overflow: hidden; pointer-events: none; opacity: .25; filter: blur(1.8px) brightness(.85) saturate(.75);
+  mask-image: linear-gradient(transparent, #000 15% 90%, transparent);
+  transition: opacity .8s;
+}
+.wall-reflection-left { left: 1%; transform: skewY(-8deg); }
+.wall-reflection-right { right: 1%; transform: skewY(8deg); }
+.wall-reflection .product-artwork { width: 500%; left: -180%; height: 100%; max-width: none; aspect-ratio: auto; transform: scaleX(-1); }
+.wall-reflection-right .product-artwork { left: -220%; }
+.wall-reflection .product-artwork img { object-fit: fill; }
+.exhibit.illuminated .wall-reflection, .focus-chamber .wall-reflection { opacity: .36; }
+.exhibit-label { bottom: -24px; left: 0; right: 0; display: flex; justify-content: center; text-align: center; z-index: 6; }
+.exhibit-label h2 { font-family: Georgia, serif; font-size: 12px; font-style: normal; margin: 0 0 4px; }
+.exhibit-label > div > span { font-size: 6px; letter-spacing: .08em; color: #77737a; }
+.collection-caption { bottom: 5%; left: 4%; right: 4%; }
+.caption-copy .eyebrow { display: none; }
+.collection-caption h1, .product-copy h1 { font-family: Georgia, 'Times New Roman', serif; font-style: normal; font-weight: 400; letter-spacing: -.055em; }
+.collection-caption h1 { font-size: clamp(30px, 3.6vw, 54px); margin: 0 0 9px; }
+.collection-caption p { font-size: 8px; color: #807b82; }
+/* Detail views crop an actual opening from the same scene. */
+.focus-chamber { overflow: visible; margin-bottom: 60px; }
+.focus-chamber > .chamber-scene { background: url('/images/stone-gallery-v3.png') 15.76% 42.1% / 730% 197.6%; }
+.focus-chamber .chamber-art { top: 28%; bottom: 3%; }
+.original-view > .chamber-scene { background: none; }
+.original-view .chamber-scene .chamber-art { inset: 0; }
+.original-view .product-aura, .original-view .light-pool, .original-view .chamber-beam { display: none; }
+@media (max-width: 700px) {
+  .header { padding-inline: 22px; height: 76px; }
+  .showroom { height: auto; min-height: 100svh; padding: 105px 0 35px; background: #030304; }
+  .exhibition, .exhibition[data-size='1'], .exhibition[data-size='2'] { position: relative; inset: auto; margin: 0 24px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 285px; gap: 135px 30px; }
+  .exhibit { grid-column: auto !important; }
+  .exhibit > a > .chamber > .chamber-scene { background: url('/images/stone-gallery-v3.png') var(--niche-x, 15.76%) 42.1% / 730% 197.6%; }
+  .showroom .chamber-art { top: 33%; bottom: 3%; left: 10%; right: 10%; }
+  .collection-caption { position: relative; inset: auto; margin: 145px 24px 0; }
+  .collection-caption h1 { font-size: 35px; white-space: normal; }
+  .collection-caption p { font-size: 9px; max-width: 270px; }
+  .niche-reflection .mirrored-scene { background: url('/images/stone-gallery-v3.png') var(--niche-x, 15.76%) 42.1% / 730% 197.6%; }
+  .exhibit-label h2 { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) { .chamber * { transition: none !important; } }
+.showroom:before {
+  display: block; content: ''; position: absolute; inset: 0 0 25.5%; z-index: 0; pointer-events: none;
+  background: linear-gradient(#0009, transparent 27%), linear-gradient(90deg, #0008 13.6%, transparent 13.6% 27.3%, #0008 27.3% 33.4%, transparent 33.4% 47.1%, #0008 47.1% 53.2%, transparent 53.2% 66.9%, #0008 66.9% 73%, transparent 73% 86.7%, #0008 86.7%);
+}
+@media (max-width: 700px) { .showroom:before { display: none; } }
+

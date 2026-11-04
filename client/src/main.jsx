@@ -13,6 +13,7 @@ import Showroom from "./components/Showroom.jsx";
 import ProductDetail from "./components/ProductDetail.jsx";
 import Bag from "./components/Bag.jsx";
 import "./styles.css";
+import "./showroom.css";
 
 const STORAGE_KEY = "itatshu-cart-v1";
 function App() {

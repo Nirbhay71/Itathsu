@@ -26,6 +26,11 @@ export default function Showroom({
         {products.map((product) => (
           <article
             key={product.id}
+            style={{
+              "--tone": product.tone,
+              "--niche-x": `${[15.76, 38.7, 61.6, 84.5][allProducts.indexOf(product)] || 15.76}%`,
+              gridColumn: allProducts.indexOf(product) + 1,
+            }}
             className={`exhibit ${active === product.id ? "illuminated" : ""} ${active && active !== product.id ? "receded" : ""}`}
             onPointerEnter={() => setActive(product.id)}
             onPointerLeave={() => setActive(null)}
@@ -38,21 +43,12 @@ export default function Showroom({
               aria-label={`Discover ${product.name}, ${money(product.price)}`}
             >
               <Chamber product={product} transition>
-                <span className="exhibit-number">
-                  {String(allProducts.indexOf(product) + 1).padStart(2, "0")}
-                </span>
                 <div className="exhibit-label">
                   <div>
                     <h2>{product.name}</h2>
                     <span>{product.category}</span>
                   </div>
-                  <span className="exhibit-price">
-                    {money(product.price)} <ArrowUpRight size={11} />
-                  </span>
                 </div>
-                <span className="exhibit-invitation">
-                  Discover this piece <ArrowUpRight size={12} />
-                </span>
               </Chamber>
             </a>
           </article>

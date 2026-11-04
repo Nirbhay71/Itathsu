@@ -47,6 +47,25 @@ export function ProductArtwork({
   );
 }
 
+function NicheScene({ product, original = false, transition = false, reflection = false }) {
+  return <>
+    <div className="chamber-beam" aria-hidden="true" />
+    <div className="product-aura" aria-hidden="true" />
+    <div className="light-pool" aria-hidden="true" />
+    {!original && <>
+      <div className="wall-reflection wall-reflection-left" aria-hidden="true">
+        <ProductArtwork product={product} reflection />
+      </div>
+      <div className="wall-reflection wall-reflection-right" aria-hidden="true">
+        <ProductArtwork product={product} reflection />
+      </div>
+    </>}
+    <div className="chamber-art">
+      <ProductArtwork product={product} original={original} transition={transition} reflection={reflection} />
+    </div>
+  </>;
+}
+
 export function Chamber({
   product,
   children,
@@ -59,22 +78,20 @@ export function Chamber({
       className={`chamber ${className} ${original ? "original-view" : ""}`}
       style={{ "--tone": product.tone || "#b7ad9a" }}
     >
-      <div className="stone-wall" aria-hidden="true" />
-      <div className="chamber-beam" aria-hidden="true" />
-      <div className="light-fixture" aria-hidden="true" />
-      <div className="chamber-art">
-        <ProductArtwork
-          product={product}
-          original={original}
-          transition={transition}
-        />
+      <div className="chamber-scene">
+        <NicheScene product={product} original={original} transition={transition} />
       </div>
       {!original && (
-        <div className="reflection-well" aria-hidden="true">
-          <ProductArtwork product={product} reflection />
+        <div className="niche-reflection" aria-hidden="true">
+          {["near", "middle", "far"].map((distance) => (
+            <div className={`reflection-band reflection-${distance}`} key={distance}>
+              <div className="chamber-scene mirrored-scene">
+                <NicheScene product={product} reflection />
+              </div>
+            </div>
+          ))}
         </div>
       )}
-      <div className="chamber-sill" aria-hidden="true" />
       {children}
     </div>
   );
